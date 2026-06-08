@@ -1,0 +1,237 @@
+:root {
+    --theme-blue: #0077b6;
+    --theme-green: #34a0a4;
+    --theme-light: #f4f9fc;
+    --theme-dark: #023047;
+    --theme-accent: #ffd166;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--theme-light); /* สีพื้นหลัง */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, var(--theme-blue), var(--theme-green));
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--theme-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header .navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header .nav-link {
+    color: white;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+header .nav-link:hover {
+    color: var(--theme-accent);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, var(--theme-dark), var(--theme-blue));
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: var(--theme-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 70px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section.bg-light {
+    background: linear-gradient(120deg, #eef7fc, #cce7f5);
+}
+
+h1, h2 {
+    color: var(--theme-blue);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--theme-blue);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--theme-green);
+    transform: scale(1.05);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--theme-blue);
+    color: var(--theme-blue);
+    border-radius: 50px;
+    padding: 8px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--theme-blue);
+    color: white;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--theme-blue);
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Carousel */
+.carousel-inner img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Fun Facts Section */
+#fun-facts {
+    background-color: #f9fbfc;
+    padding: 60px 20px;
+}
+
+#fun-facts h2 {
+    font-size: 2.5rem;
+    color: var(--theme-blue);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#fun-facts .card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#fun-facts .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#fun-facts .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+
+    #fun-facts .card {
+        margin-bottom: 20px;
+    }
+}
